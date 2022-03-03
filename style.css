@@ -1,0 +1,107 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    /* box-sizing: border-box;
+    border:dashed; */
+    }
+
+body {
+  background-color: #773dbd;
+  font-family: 'Merriweather Sans', sans-serif;
+  }
+/* the main container */
+
+.card{
+  width:50%;
+  height:68%;
+  margin: 50px auto;
+  overflow: hidden;
+  box-shadow: 2px 5px 15px 0px #17161694;
+}
+
+.front-card{
+  background-image: url("assets/Front_Business_Card.svg");
+  grid-area: f;
+}
+ 
+.back-card {
+  background-image: url("assets/Back_Business_Card.svg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  grid-area: b;
+}
+h1{
+  /* to left align text */
+  position: absolute;
+  font-size: 30pt;
+  margin-top: 10%;
+  text-align: center;
+  color: #773dbd;
+}
+
+h2{
+  font-size: 12pt;
+  text-align: center;
+  margin-bottom: 35%; 
+  font-weight: normal;
+  color: #303030;
+}
+
+h3{
+  font-size: 12pt;
+  margin-left: 5%;
+  color: #773dbd;
+}
+
+h4{
+  font-size: 12pt;
+  font-weight: normal;
+  margin-left: 5%;
+}
+
+.front-logos {
+  max-width:40%;
+  /* display: block; */
+  margin:auto;
+  margin-top: 60%;
+  height:auto
+}
+
+.back-logos {
+  margin:auto;
+  margin-top: 70%;
+  width: 50%;
+  height: auto;
+  fill: #ffffffff;
+}
+
+/* This is just the home button stuff */
+
+.home-button {
+width: 3%;
+margin-left: 1%;
+margin-top: 1%;
+fill: #ffffffff;
+}
+
+.home-button:hover {
+  fill: #562f8e;
+}
+
+/* a different version of the grid that is activated on devices 1200px or wider (most tablets and desktop devices*/
+@media only screen and (min-width: 1200px) {
+
+/* this isnt working rn just for the time being, to see the before and after of implementing this */
+    .container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 7.5% 40% 5% 40% 7.5%;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 
+        ". . . . ."
+        ". f . b ."
+        ". . . . .";
+
+}
+}
